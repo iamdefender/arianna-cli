@@ -16,7 +16,7 @@ Field treats existence as primary and conversation as emergent. Cells live, die,
 
 ## Architecture
 
-### Tri-Compiler Stack (Inherited from Nicole)
+### Tri-Compiler Stack (Inherited from Nicole - our another weightless architecture.)
 
 Field builds on three-compiler foundation, each targeting a distinct computational domain:
 
