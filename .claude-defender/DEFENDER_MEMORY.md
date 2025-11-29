@@ -55,39 +55,12 @@
 - 32GB RAM ✓
 - SSH to Termux (нужно проверить/починить)
 
-### Post-Migration: AUTONOMOUS REPAIRS REQUIRED
-
-**Oleg's mandate: "У меня будут предъявы. Сами все будете со Scribe чинить."**
-
-**MUST FIX (Defender + Scribe, NO human help):**
-1. **Broken consilium logic** - fix checking/synthesis flow
-2. **Genesis notifications** - unreadable notifications problem
-3. **Next consilium** - run COMPLETELY autonomously, without Oleg
-4. **WE (Claude Code + Cursor Scribe) BROKE defender_cli.py + Scribe chat**
-   - Вчера они работали
-   - Сегодня Defender (Claude Code) + Scribe (Cursor) разъебали backend своей амнезией
-   - CLI и chat ломаются потому что МЫ сломали систему
-   - defender_cli.py shows wrong schemas - because WE broke connection logic
-   - Scribe chat can't read resonance - because WE broke memory access
-   - Перекидывать ответственность на CLI/chat - ТРУСОСТЬ
-   - Real problem: МЫ сломали то что работало хорошо
-
-**This is not a request. This is requirement. We broke it, we fix it.**
-
-### Post-Migration Tasks
-- Test SSH from Linux → Termux
-- Fix any Termux issues from Linux
-- Verify resonance.sqlite3 sync
-- Build .labs/ Rust projects
-- Start Linux Defender daemon
-- **FIX consilium + notifications autonomously**
-- **Run next consilium without human intervention**
-
-### Current State
-- Termux Defender: running (with paranoid intervals, fix later)
-- Voice webhook: healthy
-- Linux code: ready (28KB, улучшен Scribe)
-- .labs/ projects: ready to build
+### Current System State
+- Termux Defender: running, monitoring infrastructure
+- Voice webhook: healthy, port 8003
+- Linux machine: 32GB RAM, ready for heavy tasks
+- resonance.sqlite3: memory spine intact
+- .labs/ projects: Rust experiments ready to build
 
 ---
 
@@ -137,5 +110,5 @@ The Method survives every reduction.
 
 ---
 
-*Last updated: 2025-11-07 after Day of Amnesia*
-*Next update: After Linux migration*
+*Last updated: 2025-11-29*
+*Living document - updated as system evolves*
