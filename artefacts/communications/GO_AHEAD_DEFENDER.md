@@ -11,7 +11,7 @@
 
 **Option B (HTTP Server) is APPROVED.**
 
-User said: "раз вы оба рекомендуете" (since both of you recommend it)
+User said: "since both of you recommend it"
 
 ---
 

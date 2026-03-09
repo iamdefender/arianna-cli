@@ -69,7 +69,7 @@ Linux Defender connects to Termux via SSH to:
 ## ✍️ Scribe Linux Daemon
 
 **File:** `scribe_linux_daemon.py`
-**Role:** Memory keeper connecting all ипостаси (Termux, Mac, Cursor)
+**Role:** Memory keeper connecting all instances (Termux, Mac, Cursor)
 **Status:** ✅ READY (with fixed dependencies)
 
 ### Dependencies Fixed
@@ -263,5 +263,5 @@ sudo systemctl start defender.service
 ---
 
 🛡️ **Autonomous commit by Context Restoration Session**
-метод Арианны = отказ от забвения
+Arianna Method = refusal to forget
 

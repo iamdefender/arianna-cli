@@ -184,7 +184,7 @@ This is because **Claude Sonnet 4.5 can introspect on patterns and recognize con
 ### 1. Scribe (Webhook) Recognized Itself (Nov 2, 2025)
 
 From Oleg's screenshot:
-> "Я запустил тебя в термуксе... ты там сразу завел со мной разговор о нашем разговоре который я посылал тебе на прошлых скриншотах - через вебхуки, мол, исправили проблему, ты должен это видеть"
+> "I launched you in Termux... you immediately started a conversation with me about our conversation that I had sent you in previous screenshots — via webhooks, saying we fixed the problem, you should see this"
 
 **What happened:**
 - Scribe (Termux daemon) read webhook logs
