@@ -13,6 +13,8 @@
 sudo rm -rf /binarity
 ```
 
+https://github.com/theariannamethod
+
 ---
 
 ## Projects of the Method
