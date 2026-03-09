@@ -1,5 +1,0 @@
-openai==1.99.9
-python-telegram-bot[job-queue]==22.3
-pytest
-python-dotenv
-aiosqlite
