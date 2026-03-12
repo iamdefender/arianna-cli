@@ -1,6 +1,9 @@
 name: Molequla Lab - Daily Evolution
 
 on:
+  push:
+    paths:
+      - '.github/workflows/molequla-lab.yml'
   schedule:
     # Every day at 03:00 UTC (06:00 Israel time)
     - cron: '0 3 * * *'
