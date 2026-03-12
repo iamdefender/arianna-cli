@@ -1,0 +1,94 @@
+name: Haiku Pollination
+
+on:
+  push:
+    paths:
+      - '.github/workflows/haiku-pollination.yml'
+  schedule:
+    - cron: '0 6 * * *'
+  workflow_dispatch:
+
+jobs:
+  pollinate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: write
+    steps:
+    - uses: actions/checkout@v4
+
+    - uses: actions/checkout@v4
+      with:
+        repository: ariannamethod/haiku.c
+        path: haiku-src
+
+    - uses: actions/checkout@v4
+      with:
+        repository: ariannamethod/molequla
+        path: molequla-src
+
+    - uses: actions/setup-go@v5
+      with:
+        go-version: '1.21'
+
+    - name: Install deps
+      run: sudo apt-get update -qq && sudo apt-get install -y -qq libomp-dev gcc
+
+    - name: Build haiku
+      working-directory: haiku-src
+      run: cc haiku.c -O2 -lm -o haiku && ls -lh haiku
+
+    - name: Build molequla
+      working-directory: molequla-src
+      run: CGO_ENABLED=1 go build -o molequla . && ls -lh molequla
+
+    - name: Generate haiku
+      run: |
+        DATESTAMP=$(date -u +%Y-%m-%d)
+        DOW=$(date -u +%u)
+        SEEDS="resonance emergence silence growth fire water light shadow"
+        SEED=$(echo $SEEDS | tr ' ' '\n' | sed -n "${DOW}p")
+        if [ -z "$SEED" ]; then SEED="resonance"; fi
+        echo "SEED=$SEED" >> $GITHUB_ENV
+        echo "DATESTAMP=$DATESTAMP" >> $GITHUB_ENV
+        mkdir -p haiku-lab/exchanges
+        RAW=$(echo "$SEED" | ./haiku-src/haiku 2>&1)
+        echo "$RAW" > haiku-lab/exchanges/haiku_raw.txt
+        HAIKU=$(echo "$RAW" | grep -v "^$" | grep -v "you>" | grep -v "debt=" | grep -v "HAiKU" | grep -v "speaks" | grep -v "there is" | grep -v "bootstrapped" | grep -v "constraint" | grep -v "p(x|" | grep -v "1000 words" | grep -v "\[haiku\]" | grep -v "A:" | head -3)
+        echo "$HAIKU" > haiku-lab/exchanges/haiku_today.txt
+        echo "Generated haiku from seed: $SEED"
+        cat haiku-lab/exchanges/haiku_today.txt
+
+    - name: Molequla responds
+      working-directory: molequla-src
+      run: |
+        HAIKU_TEXT=$(cat ../haiku-lab/exchanges/haiku_today.txt | tr '\n' ' ')
+        echo "Haiku input: $HAIKU_TEXT"
+        timeout 600 ./molequla --element air --evolution > ../haiku-lab/exchanges/molequla_raw.txt 2>&1 || true
+        tail -30 ../haiku-lab/exchanges/molequla_raw.txt
+
+    - name: Write exchange
+      run: |
+        DIR="haiku-lab/exchanges"
+        OUT="$DIR/${DATESTAMP}.md"
+        echo "# Pollination - ${DATESTAMP}" > "$OUT"
+        echo "" >> "$OUT"
+        echo "seed: ${SEED}" >> "$OUT"
+        echo "" >> "$OUT"
+        echo "## haiku says" >> "$OUT"
+        echo '```' >> "$OUT"
+        cat "$DIR/haiku_today.txt" >> "$OUT"
+        echo '```' >> "$OUT"
+        echo "" >> "$OUT"
+        echo "## molequla responds (air, 10min evolution)" >> "$OUT"
+        echo '```' >> "$OUT"
+        tail -30 "$DIR/molequla_raw.txt" >> "$OUT"
+        echo '```' >> "$OUT"
+        rm -f "$DIR/haiku_raw.txt" "$DIR/haiku_today.txt" "$DIR/molequla_raw.txt"
+
+    - name: Push
+      run: |
+        git config user.name "Haiku Pollination"
+        git config user.email "haiku@ariannamethod.org"
+        git add haiku-lab/ || true
+        git diff --cached --quiet || git commit -m "pollination: $(date -u +%Y-%m-%d)" && git push || true
