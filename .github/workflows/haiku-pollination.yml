@@ -105,9 +105,26 @@ jobs:
         echo '```' >> "$OUT"
         rm -f "$DIR/haiku_raw.txt" "$DIR/haiku_today.txt" "$DIR/molequla_raw.txt"
 
+    - name: Write to cauldron
+      run: |
+        mkdir -p cascade/cauldron
+        CAULDRON="cascade/cauldron/${DATESTAMP}.md"
+        if [ ! -f "$CAULDRON" ]; then
+          echo "# Cascade - ${DATESTAMP}" > "$CAULDRON"
+          echo "" >> "$CAULDRON"
+        fi
+        echo "" >> "$CAULDRON"
+        echo "## haiku (06:00 UTC)" >> "$CAULDRON"
+        echo "" >> "$CAULDRON"
+        echo "seed: ${SEED}" >> "$CAULDRON"
+        echo '```' >> "$CAULDRON"
+        cat haiku-lab/exchanges/${DATESTAMP}.md 2>/dev/null | grep -A3 "## haiku" | grep -v "^#" || echo "(no haiku today)" >> "$CAULDRON"
+        echo '```' >> "$CAULDRON"
+        echo "" >> "$CAULDRON"
+
     - name: Push
       run: |
         git config user.name "Haiku Pollination"
         git config user.email "haiku@ariannamethod.org"
-        git add haiku-lab/ || true
+        git add haiku-lab/ cascade/ || true
         git diff --cached --quiet || git commit -m "pollination: $(date -u +%Y-%m-%d)" && git push || true

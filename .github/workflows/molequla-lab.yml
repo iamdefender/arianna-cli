@@ -39,14 +39,16 @@ jobs:
         DATESTAMP=$(date -u +%Y-%m-%d)
         RUN_DIR="../molequla-lab/runs/${DATESTAMP}"
         mkdir -p "${RUN_DIR}"
-        DURATION=60
-        for elem in earth air water fire; do
-          timeout $((DURATION * 60)) ./molequla --element ${elem} --evolution > "${RUN_DIR}/${elem}.log" 2>&1 &
-          sleep 5
-        done
-        echo "All launched, waiting..."
+        DURATION=15
+        echo "Phase 1: earth + air (parallel, 15 min each)"
+        timeout $((DURATION * 60)) ./molequla --element earth --evolution > "${RUN_DIR}/earth.log" 2>&1 &
+        timeout $((DURATION * 60)) ./molequla --element air --evolution > "${RUN_DIR}/air.log" 2>&1 &
         wait || true
-        echo "Done."
+        echo "Phase 2: water + fire (parallel, 15 min each)"
+        timeout $((DURATION * 60)) ./molequla --element water --evolution > "${RUN_DIR}/water.log" 2>&1 &
+        timeout $((DURATION * 60)) ./molequla --element fire --evolution > "${RUN_DIR}/fire.log" 2>&1 &
+        wait || true
+        echo "Done. All 4 elements evolved."
 
     - name: Report
       run: |
@@ -61,9 +63,28 @@ jobs:
           fi
         done
 
+    - name: Write to cauldron
+      run: |
+        DATESTAMP=$(date -u +%Y-%m-%d)
+        mkdir -p cascade/cauldron
+        CAULDRON="cascade/cauldron/${DATESTAMP}.md"
+        echo "# Cascade - ${DATESTAMP}" > "$CAULDRON"
+        echo "" >> "$CAULDRON"
+        echo "## molequla (03:00 UTC)" >> "$CAULDRON"
+        echo "" >> "$CAULDRON"
+        RUN_DIR="molequla-lab/runs/${DATESTAMP}"
+        for elem in earth air water fire; do
+          if [ -f "${RUN_DIR}/${elem}.log" ]; then
+            LINES=$(wc -l < "${RUN_DIR}/${elem}.log")
+            echo "**${elem}**: ${LINES} lines" >> "$CAULDRON"
+            tail -3 "${RUN_DIR}/${elem}.log" >> "$CAULDRON"
+            echo "" >> "$CAULDRON"
+          fi
+        done
+
     - name: Push
       run: |
         git config user.name "Molequla Lab"
         git config user.email "lab@ariannamethod.org"
-        git add molequla-lab/ || true
+        git add molequla-lab/ cascade/ || true
         git diff --cached --quiet || git commit -m "lab: $(date -u +%Y-%m-%d)" && git push || true
