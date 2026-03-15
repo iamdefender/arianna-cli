@@ -113,5 +113,7 @@ jobs:
       run: |
         git config user.name "Cascade: Yent"
         git config user.email "yent@ariannamethod.org"
+        git pull --rebase origin main || true
         git add cascade/ yent-lab/ || true
-        git diff --cached --quiet || git commit -m "cascade/yent: $(date -u +%Y-%m-%d)" && git push || true
+        git diff --cached --quiet || git commit -m "cascade/yent: $(date -u +%Y-%m-%d)"
+        git push || git push || true

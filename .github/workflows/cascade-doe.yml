@@ -91,5 +91,7 @@ jobs:
       run: |
         git config user.name "Cascade: DoE"
         git config user.email "doe@ariannamethod.org"
+        git pull --rebase origin main || true
         git add cascade/ doe-lab/ || true
-        git diff --cached --quiet || git commit -m "cascade/doe: $(date -u +%Y-%m-%d)" && git push || true
+        git diff --cached --quiet || git commit -m "cascade/doe: $(date -u +%Y-%m-%d)"
+        git push || git push || true

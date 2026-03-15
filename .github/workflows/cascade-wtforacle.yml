@@ -108,5 +108,7 @@ jobs:
       run: |
         git config user.name "Cascade: WTForacle"
         git config user.email "wtf@ariannamethod.org"
+        git pull --rebase origin main || true
         git add cascade/ wtforacle-lab/ || true
-        git diff --cached --quiet || git commit -m "cascade/wtforacle: $(date -u +%Y-%m-%d)" && git push || true
+        git diff --cached --quiet || git commit -m "cascade/wtforacle: $(date -u +%Y-%m-%d)"
+        git push || git push || true
