@@ -40,11 +40,11 @@ jobs:
         RUN_DIR="../molequla-lab/runs/${DATESTAMP}"
         mkdir -p "${RUN_DIR}"
         DURATION=15
-        echo "Phase 1: earth + air (parallel, 15 min each)"
-        timeout $((DURATION * 60)) ./molequla --element earth --evolution > "${RUN_DIR}/earth.log" 2>&1 &
-        timeout $((DURATION * 60)) ./molequla --element air --evolution > "${RUN_DIR}/air.log" 2>&1 &
-        wait || true
-        echo "Phase 2: water + fire (parallel, 15 min each)"
+        echo "Phase 1: earth (solo — SQLite lock)"
+        timeout $((DURATION * 60)) ./molequla --element earth --evolution > "${RUN_DIR}/earth.log" 2>&1 || true
+        echo "Phase 2: air (solo — SQLite lock)"
+        timeout $((DURATION * 60)) ./molequla --element air --evolution > "${RUN_DIR}/air.log" 2>&1 || true
+        echo "Phase 3: water + fire (parallel)"
         timeout $((DURATION * 60)) ./molequla --element water --evolution > "${RUN_DIR}/water.log" 2>&1 &
         timeout $((DURATION * 60)) ./molequla --element fire --evolution > "${RUN_DIR}/fire.log" 2>&1 &
         wait || true

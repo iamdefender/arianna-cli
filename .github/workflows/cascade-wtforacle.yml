@@ -73,14 +73,22 @@ jobs:
         lib.wtf_init.restype = ctypes.c_int
         lib.wtf_init.argtypes = [ctypes.c_char_p]
         lib.wtf_generate.restype = ctypes.c_int
-        lib.wtf_generate.argtypes = [ctypes.c_char_p, ctypes.c_int, ctypes.c_float, ctypes.c_float, ctypes.c_char_p, ctypes.c_int]
+        lib.wtf_generate.argtypes = [
+            ctypes.c_char_p,  # prompt
+            ctypes.c_char_p,  # output buffer
+            ctypes.c_int,     # max_output_len
+            ctypes.c_int,     # max_tokens
+            ctypes.c_float,   # temperature
+            ctypes.c_float,   # top_p
+            ctypes.c_char_p   # anchor_prompt
+        ]
         rc = lib.wtf_init(b'wtfweights/wtf360_v2_q4_0.gguf')
         if rc != 0:
             print('WTForacle init failed', file=sys.stderr)
             sys.exit(1)
         prompt = sys.stdin.read().encode('utf-8')
         buf = ctypes.create_string_buffer(2048)
-        n = lib.wtf_generate(prompt, 150, ctypes.c_float(0.9), ctypes.c_float(0.9), buf, 2048)
+        n = lib.wtf_generate(prompt, buf, 2048, 150, ctypes.c_float(0.9), ctypes.c_float(0.9), None)
         print(buf.value.decode('utf-8', errors='replace'))
         lib.wtf_free()
         PYEOF
