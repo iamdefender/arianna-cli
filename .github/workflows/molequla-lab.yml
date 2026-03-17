@@ -4,8 +4,8 @@ on:
   push:
     paths:
       - '.github/workflows/molequla-lab.yml'
-  schedule:
-    - cron: '0 3 * * *'
+#  schedule:
+#    - cron: '0 3 * * *'
   workflow_dispatch:
 
 jobs:
