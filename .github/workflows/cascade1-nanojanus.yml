@@ -64,23 +64,28 @@ jobs:
     - name: Update cascade state
       run: |
         C1="cascade/cascade1"
-        {
-          echo ""
-          echo "---"
-          echo ""
-          echo "## ${DATESTAMP}"
-          echo ""
-          echo "**seed:** $(cat "$C1/seed/${DATESTAMP}.txt" 2>/dev/null | head -1 | cut -c1-200)"
-          echo ""
-          echo "**haiku:**"
-          cat "$C1/haiku-lab/${DATESTAMP}.txt" 2>/dev/null || true
-          echo ""
-          echo "**penelope:** $(cat "$C1/penelope-lab/${DATESTAMP}.txt" 2>/dev/null)"
-          echo ""
-          echo "**molequla:** $(wc -l "$C1/molequla-lab/${DATESTAMP}/"*.log 2>/dev/null | tail -1 || echo "no logs")"
-          echo ""
-          echo "**nanojanus:** $(cat "$C1/nanojanus-lab/${DATESTAMP}.txt" 2>/dev/null)"
-        } >> "$C1/cascade.md"
+        # Idempotent: skip if this date already recorded
+        if grep -q "## ${DATESTAMP}" "$C1/cascade.md" 2>/dev/null; then
+          echo "cascade.md already has entry for ${DATESTAMP}, skipping"
+        else
+          {
+            echo ""
+            echo "---"
+            echo ""
+            echo "## ${DATESTAMP}"
+            echo ""
+            echo "**seed:** $(cat "$C1/seed/${DATESTAMP}.txt" 2>/dev/null | head -1 | cut -c1-200)"
+            echo ""
+            echo "**haiku:**"
+            cat "$C1/haiku-lab/${DATESTAMP}.txt" 2>/dev/null || true
+            echo ""
+            echo "**penelope:** $(cat "$C1/penelope-lab/${DATESTAMP}.txt" 2>/dev/null)"
+            echo ""
+            echo "**molequla:** $(wc -l "$C1/molequla-lab/${DATESTAMP}/"*.log 2>/dev/null | tail -1 || echo "no logs")"
+            echo ""
+            echo "**nanojanus:** $(cat "$C1/nanojanus-lab/${DATESTAMP}.txt" 2>/dev/null)"
+          } >> "$C1/cascade.md"
+        fi
 
     - name: Push
       run: |
