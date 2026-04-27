@@ -1,0 +1,491 @@
+[ecology] Element: earth → corpus: nonames_earth.txt
+[evolution] Autonomous evolution mode — organism will grow through all stages without pause.
+[init] Stage 0 (embryo): embd=16, layer=1, head=1 — warmup 400 steps (400 backprop + 0 notorch, sqrt-scaled 1x)
+  [aml] step 0/160 | loss 6.5812 (avg 6.5812) | lr 0.001000 | seq 8
+  [aml] step 10/160 | loss 6.1520 (avg 6.3894) | lr 0.001450 | seq 8
+  [aml] step 20/160 | loss 6.3004 (avg 6.2670) | lr 0.001900 | seq 8
+  [aml] step 30/160 | loss 5.6811 (avg 6.1744) | lr 0.002350 | seq 8
+  [aml] step 40/160 | loss 5.4336 (avg 6.0607) | lr 0.002800 | seq 8
+  [aml] step 50/160 | loss 4.6638 (avg 5.9111) | lr 0.003250 | seq 8
+  [aml] step 60/160 | loss 4.8829 (avg 5.7489) | lr 0.003700 | seq 8
+  [aml] step 70/160 | loss 5.2472 (avg 5.6366) | lr 0.004150 | seq 8
+  [aml] step 80/160 | loss 3.0106 (avg 5.5121) | lr 0.004600 | seq 8
+  [aml] step 90/160 | loss 4.3629 (avg 5.3741) | lr 0.005050 | seq 8
+  [aml] step 100/160 | loss 4.7066 (avg 5.2795) | lr 0.005500 | seq 8
+  [aml] step 110/160 | loss 5.0410 (avg 5.1443) | lr 0.005950 | seq 8
+  [aml] step 120/160 | loss 4.0888 (avg 5.0745) | lr 0.006400 | seq 8
+  [aml] step 130/160 | loss 4.2966 (avg 5.0324) | lr 0.006850 | seq 8
+  [aml] step 140/160 | loss 2.9113 (avg 4.9873) | lr 0.007300 | seq 8
+  [aml] step 150/160 | loss 2.8662 (avg 4.9424) | lr 0.007750 | seq 8
+[aml] training complete: 160 steps, avg loss 4.8969 (memory freed)
+  [aml] step 0/120 | loss 4.6508 (avg 4.6508) | lr 0.008200 | seq 16
+  [aml] step 10/120 | loss 4.4063 (avg 4.3913) | lr 0.008650 | seq 16
+  [aml] step 20/120 | loss 3.3340 (avg 4.3848) | lr 0.009100 | seq 16
+  [aml] step 30/120 | loss 3.2043 (avg 4.1080) | lr 0.009550 | seq 16
+  [aml] step 40/120 | loss 3.3771 (avg 4.1344) | lr 0.010000 | seq 16
+  [aml] step 50/120 | loss 2.8392 (avg 4.0894) | lr 0.010000 | seq 16
+  [aml] step 60/120 | loss 4.5787 (avg 4.0799) | lr 0.010000 | seq 16
+  [aml] step 70/120 | loss 4.6580 (avg 4.0082) | lr 0.010000 | seq 16
+  [aml] step 80/120 | loss 5.1001 (avg 3.9608) | lr 0.009999 | seq 16
+  [aml] step 90/120 | loss 4.4634 (avg 3.8653) | lr 0.009999 | seq 16
+  [aml] step 100/120 | loss 3.7435 (avg 3.8021) | lr 0.009999 | seq 16
+  [aml] step 110/120 | loss 5.3785 (avg 3.7365) | lr 0.009999 | seq 16
+[aml] training complete: 120 steps, avg loss 3.7655 (memory freed)
+  [aml] step 0/120 | loss 2.8389 (avg 2.8389) | lr 0.009999 | seq 32
+  [aml] step 10/120 | loss 4.8437 (avg 3.9001) | lr 0.009999 | seq 32
+  [aml] step 20/120 | loss 4.2374 (avg 3.7266) | lr 0.009999 | seq 32
+  [aml] step 30/120 | loss 3.8067 (avg 3.4455) | lr 0.009999 | seq 32
+  [aml] step 40/120 | loss 4.0419 (avg 3.3912) | lr 0.009999 | seq 32
+  [aml] step 50/120 | loss 3.8886 (avg 3.3673) | lr 0.009999 | seq 32
+  [aml] step 60/120 | loss 2.7366 (avg 3.3079) | lr 0.009999 | seq 32
+  [aml] step 70/120 | loss 1.3516 (avg 3.2693) | lr 0.009999 | seq 32
+  [aml] step 80/120 | loss 4.4544 (avg 3.2653) | lr 0.009999 | seq 32
+  [aml] step 90/120 | loss 1.5092 (avg 3.2208) | lr 0.009999 | seq 32
+  [aml] step 100/120 | loss 0.8201 (avg 3.2316) | lr 0.009999 | seq 32
+  [aml] step 110/120 | loss 0.8507 (avg 3.1108) | lr 0.009999 | seq 32
+[aml] training complete: 120 steps, avg loss 3.0200 (memory freed)
+
+[stage 0 — embryo] What it sounds like now:
+  Q: Hello.
+  A: :: What is a prepresents over mesh base of years.
+  Q: Who are you?
+  A: or vium cap show does a gave and ret enormal from erosion.
+  Q: What do you know?
+  A: ...
+
+[growth] ONTOGENESIS: stage 0 -> 1
+  embd: 16 -> 32, layer: 1 -> 1, head: 1 -> 2
+[growth] Done. Freeze for 500 steps.
+[init] Stage 1 (infant): embd=32, layer=1, head=2 — warmup 800 steps (800 backprop + 0 notorch, sqrt-scaled 2x)
+  [aml] step 0/320 | loss 8.6122 (avg 8.6122) | lr 0.000500 | seq 8
+  [aml] step 10/320 | loss 3.9751 (avg 3.8758) | lr 0.000725 | seq 8
+  [aml] step 20/320 | loss 5.8821 (avg 4.0176) | lr 0.000950 | seq 8
+  [aml] step 30/320 | loss 3.5780 (avg 3.7257) | lr 0.001175 | seq 8
+  [aml] step 40/320 | loss 1.3845 (avg 3.6966) | lr 0.001400 | seq 8
+  [aml] step 50/320 | loss 2.4135 (avg 3.6372) | lr 0.001625 | seq 8
+  [aml] step 60/320 | loss 4.1210 (avg 3.7085) | lr 0.001850 | seq 8
+  [aml] step 70/320 | loss 3.4742 (avg 3.6388) | lr 0.002075 | seq 8
+  [aml] step 80/320 | loss 2.3379 (avg 3.6340) | lr 0.002300 | seq 8
+  [aml] step 90/320 | loss 4.0672 (avg 3.6879) | lr 0.002525 | seq 8
+  [aml] step 100/320 | loss 3.6931 (avg 3.7049) | lr 0.002750 | seq 8
+  [aml] step 110/320 | loss 4.9528 (avg 3.7716) | lr 0.002975 | seq 8
+  [aml] step 120/320 | loss 0.9544 (avg 3.7388) | lr 0.003200 | seq 8
+  [aml] step 130/320 | loss 5.9210 (avg 3.7658) | lr 0.003425 | seq 8
+  [aml] step 140/320 | loss 4.8935 (avg 3.7521) | lr 0.003650 | seq 8
+  [aml] step 150/320 | loss 4.0485 (avg 3.6932) | lr 0.003875 | seq 8
+  [aml] step 160/320 | loss 3.9130 (avg 3.6631) | lr 0.004100 | seq 8
+  [aml] step 170/320 | loss 4.7255 (avg 3.6581) | lr 0.004325 | seq 8
+  [aml] step 180/320 | loss 0.4336 (avg 3.6317) | lr 0.004550 | seq 8
+  [aml] step 190/320 | loss 4.9884 (avg 3.6369) | lr 0.004775 | seq 8
+  [aml] step 200/320 | loss 4.8167 (avg 3.6084) | lr 0.004998 | seq 8
+  [aml] step 210/320 | loss 3.7452 (avg 3.6138) | lr 0.004998 | seq 8
+  [aml] step 220/320 | loss 0.9255 (avg 3.5725) | lr 0.004998 | seq 8
+  [aml] step 230/320 | loss 0.3411 (avg 3.5577) | lr 0.004998 | seq 8
+  [aml] step 240/320 | loss 3.8113 (avg 3.5813) | lr 0.004998 | seq 8
+  [aml] step 250/320 | loss 4.2829 (avg 3.5793) | lr 0.004998 | seq 8
+  [aml] step 260/320 | loss 3.7127 (avg 3.5948) | lr 0.004998 | seq 8
+  [aml] step 270/320 | loss 5.5150 (avg 3.5817) | lr 0.004998 | seq 8
+  [aml] step 280/320 | loss 4.4008 (avg 3.5822) | lr 0.004998 | seq 8
+  [aml] step 290/320 | loss 4.7722 (avg 3.5886) | lr 0.004998 | seq 8
+  [aml] step 300/320 | loss 3.6864 (avg 3.5556) | lr 0.004998 | seq 8
+  [aml] step 310/320 | loss 1.6286 (avg 3.5512) | lr 0.004998 | seq 8
+[aml] training complete: 320 steps, avg loss 3.5599 (memory freed)
+  [aml] step 0/240 | loss 4.9576 (avg 4.9576) | lr 0.004998 | seq 16
+  [aml] step 10/240 | loss 3.5047 (avg 3.9967) | lr 0.004998 | seq 16
+  [aml] step 20/240 | loss 1.3367 (avg 3.6747) | lr 0.004998 | seq 16
+  [aml] step 30/240 | loss 2.7062 (avg 3.5889) | lr 0.004998 | seq 16
+  [aml] step 40/240 | loss 3.6747 (avg 3.4815) | lr 0.004997 | seq 16
+  [aml] step 50/240 | loss 1.9224 (avg 3.3307) | lr 0.004997 | seq 16
+  [aml] step 60/240 | loss 1.2857 (avg 3.2579) | lr 0.004997 | seq 16
+  [aml] step 70/240 | loss 2.7824 (avg 3.3241) | lr 0.004997 | seq 16
+  [aml] step 80/240 | loss 3.0474 (avg 3.2835) | lr 0.004997 | seq 16
+  [aml] step 90/240 | loss 4.9519 (avg 3.2439) | lr 0.004997 | seq 16
+  [aml] step 100/240 | loss 4.8801 (avg 3.1869) | lr 0.004997 | seq 16
+  [aml] step 110/240 | loss 1.6518 (avg 3.1847) | lr 0.004997 | seq 16
+  [aml] step 120/240 | loss 1.7398 (avg 3.1216) | lr 0.004997 | seq 16
+  [aml] step 130/240 | loss 3.4584 (avg 3.1805) | lr 0.004997 | seq 16
+  [aml] step 140/240 | loss 1.9261 (avg 3.1349) | lr 0.004997 | seq 16
+  [aml] step 150/240 | loss 4.1017 (avg 3.1488) | lr 0.004997 | seq 16
+  [aml] step 160/240 | loss 3.3297 (avg 3.1271) | lr 0.004997 | seq 16
+  [aml] step 170/240 | loss 4.0237 (avg 3.1486) | lr 0.004996 | seq 16
+  [aml] step 180/240 | loss 3.8975 (avg 3.1739) | lr 0.004996 | seq 16
+  [aml] step 190/240 | loss 3.0745 (avg 3.1969) | lr 0.004996 | seq 16
+  [aml] step 200/240 | loss 3.7908 (avg 3.1860) | lr 0.004996 | seq 16
+  [aml] step 210/240 | loss 3.4241 (avg 3.2028) | lr 0.004996 | seq 16
+  [aml] step 220/240 | loss 4.3943 (avg 3.2136) | lr 0.004996 | seq 16
+  [aml] step 230/240 | loss 2.3000 (avg 3.1947) | lr 0.004996 | seq 16
+[aml] training complete: 240 steps, avg loss 3.1771 (memory freed)
+  [aml] step 0/240 | loss 1.6019 (avg 1.6019) | lr 0.004996 | seq 32
+  [aml] step 10/240 | loss 3.9481 (avg 3.6172) | lr 0.004996 | seq 32
+  [aml] step 20/240 | loss 4.6237 (avg 3.4692) | lr 0.004996 | seq 32
+  [aml] step 30/240 | loss 3.9253 (avg 3.4206) | lr 0.004996 | seq 32
+  [aml] step 40/240 | loss 4.4996 (avg 3.2575) | lr 0.004996 | seq 32
+  [aml] step 50/240 | loss 0.9960 (avg 3.0919) | lr 0.004995 | seq 32
+  [aml] step 60/240 | loss 4.8295 (avg 3.1815) | lr 0.004995 | seq 32
+  [aml] step 70/240 | loss 2.3817 (avg 3.1030) | lr 0.004995 | seq 32
+  [aml] step 80/240 | loss 4.4229 (avg 3.1736) | lr 0.004995 | seq 32
+  [aml] step 90/240 | loss 4.5795 (avg 3.1182) | lr 0.004995 | seq 32
+  [aml] step 100/240 | loss 1.8780 (avg 3.0797) | lr 0.004995 | seq 32
+  [aml] step 110/240 | loss 0.8287 (avg 3.0097) | lr 0.004995 | seq 32
+  [aml] step 120/240 | loss 4.4157 (avg 3.0049) | lr 0.004995 | seq 32
+  [aml] step 130/240 | loss 3.9414 (avg 2.9489) | lr 0.004995 | seq 32
+  [aml] step 140/240 | loss 4.1170 (avg 2.9583) | lr 0.004995 | seq 32
+  [aml] step 150/240 | loss 2.0077 (avg 2.9090) | lr 0.004995 | seq 32
+  [aml] step 160/240 | loss 3.7861 (avg 2.9036) | lr 0.004994 | seq 32
+  [aml] step 170/240 | loss 3.7098 (avg 2.8984) | lr 0.004994 | seq 32
+  [aml] step 180/240 | loss 4.8126 (avg 2.8693) | lr 0.004994 | seq 32
+  [aml] step 190/240 | loss 3.6961 (avg 2.8298) | lr 0.004994 | seq 32
+  [aml] step 200/240 | loss 4.1501 (avg 2.8323) | lr 0.004994 | seq 32
+  [aml] step 210/240 | loss 1.4769 (avg 2.8082) | lr 0.004994 | seq 32
+  [aml] step 220/240 | loss 1.5536 (avg 2.7680) | lr 0.004994 | seq 32
+  [aml] step 230/240 | loss 1.0201 (avg 2.7473) | lr 0.004994 | seq 32
+[aml] training complete: 240 steps, avg loss 2.7463 (memory freed)
+
+[stage 1 — infant] What it sounds like now:
+  Q: Hello.
+  A: Bric propages, a block of sits enced to a determining.
+  Q: Who are you?
+  A: ...
+  Q: What do you know?
+  A: rock composition years, the soil is a importance of s formics, the rock forms the earth below the earth's are season a foundations, and pressure rest is slowly under a sea field outcropical and stopascals miling molten, which made here that formenticalic material with arinding andgineering the water.
+
+[growth] ONTOGENESIS: stage 1 -> 2
+  embd: 32 -> 64, layer: 1 -> 2, head: 2 -> 4
+[growth] Done. Freeze for 500 steps.
+[init] Stage 2 (child): embd=64, layer=2, head=4 — warmup 800 steps (800 backprop + 0 notorch, sqrt-scaled 2x)
+  [aml] step 0/320 | loss 3.2151 (avg 3.2151) | lr 0.000250 | seq 8
+  [aml] step 10/320 | loss 5.1093 (avg 3.9952) | lr 0.000363 | seq 8
+  [aml] step 20/320 | loss 0.3260 (avg 3.7296) | lr 0.000475 | seq 8
+  [aml] step 30/320 | loss 1.8247 (avg 3.7055) | lr 0.000588 | seq 8
+  [aml] step 40/320 | loss 4.1515 (avg 3.7094) | lr 0.000700 | seq 8
+  [aml] step 50/320 | loss 4.0745 (avg 3.5550) | lr 0.000813 | seq 8
+  [aml] step 60/320 | loss 1.6750 (avg 3.4571) | lr 0.000925 | seq 8
+  [aml] step 70/320 | loss 3.0778 (avg 3.4200) | lr 0.001038 | seq 8
+  [aml] step 80/320 | loss 3.8303 (avg 3.5286) | lr 0.001150 | seq 8
+  [aml] step 90/320 | loss 1.6012 (avg 3.4989) | lr 0.001263 | seq 8
+  [aml] step 100/320 | loss 4.5151 (avg 3.5161) | lr 0.001375 | seq 8
+  [aml] step 110/320 | loss 3.4265 (avg 3.4455) | lr 0.001488 | seq 8
+  [aml] step 120/320 | loss 3.1810 (avg 3.4214) | lr 0.001600 | seq 8
+  [aml] step 130/320 | loss 3.5056 (avg 3.4038) | lr 0.001713 | seq 8
+  [aml] step 140/320 | loss 4.7260 (avg 3.4084) | lr 0.001825 | seq 8
+  [aml] step 150/320 | loss 0.9776 (avg 3.4162) | lr 0.001938 | seq 8
+  [aml] step 160/320 | loss 4.5098 (avg 3.4290) | lr 0.002050 | seq 8
+  [aml] step 170/320 | loss 2.3563 (avg 3.4085) | lr 0.002163 | seq 8
+  [aml] step 180/320 | loss 4.6990 (avg 3.3940) | lr 0.002275 | seq 8
+  [aml] step 190/320 | loss 4.7773 (avg 3.3624) | lr 0.002387 | seq 8
+  [aml] step 200/320 | loss 4.3275 (avg 3.3590) | lr 0.002496 | seq 8
+  [aml] step 210/320 | loss 4.3130 (avg 3.4088) | lr 0.002496 | seq 8
+  [aml] step 220/320 | loss 3.5240 (avg 3.4054) | lr 0.002496 | seq 8
+  [aml] step 230/320 | loss 1.9473 (avg 3.3786) | lr 0.002495 | seq 8
+  [aml] step 240/320 | loss 4.2227 (avg 3.3967) | lr 0.002495 | seq 8
+  [aml] step 250/320 | loss 1.8476 (avg 3.3917) | lr 0.002495 | seq 8
+  [aml] step 260/320 | loss 0.1777 (avg 3.3158) | lr 0.002495 | seq 8
+  [aml] step 270/320 | loss 5.5245 (avg 3.3164) | lr 0.002495 | seq 8
+  [aml] step 280/320 | loss 4.9105 (avg 3.3230) | lr 0.002495 | seq 8
+  [aml] step 290/320 | loss 4.8705 (avg 3.3174) | lr 0.002495 | seq 8
+  [aml] step 300/320 | loss 3.4913 (avg 3.3292) | lr 0.002495 | seq 8
+  [aml] step 310/320 | loss 3.1263 (avg 3.3229) | lr 0.002495 | seq 8
+[aml] training complete: 320 steps, avg loss 3.3173 (memory freed)
+  [aml] step 0/240 | loss 4.4868 (avg 4.4868) | lr 0.002495 | seq 16
+  [aml] step 10/240 | loss 3.1981 (avg 3.8114) | lr 0.002495 | seq 16
+  [aml] step 20/240 | loss 4.5517 (avg 3.9395) | lr 0.002495 | seq 16
+  [aml] step 30/240 | loss 1.7933 (avg 3.7855) | lr 0.002495 | seq 16
+  [aml] step 40/240 | loss 1.2786 (avg 3.5370) | lr 0.002495 | seq 16
+  [aml] step 50/240 | loss 1.7000 (avg 3.3602) | lr 0.002495 | seq 16
+  [aml] step 60/240 | loss 4.1790 (avg 3.3802) | lr 0.002494 | seq 16
+  [aml] step 70/240 | loss 4.3551 (avg 3.2680) | lr 0.002494 | seq 16
+  [aml] step 80/240 | loss 1.8899 (avg 3.1333) | lr 0.002494 | seq 16
+  [aml] step 90/240 | loss 4.0872 (avg 3.1628) | lr 0.002494 | seq 16
+  [aml] step 100/240 | loss 3.7098 (avg 3.1882) | lr 0.002494 | seq 16
+  [aml] step 110/240 | loss 1.3501 (avg 3.1820) | lr 0.002494 | seq 16
+  [aml] step 120/240 | loss 1.6722 (avg 3.1498) | lr 0.002494 | seq 16
+  [aml] step 130/240 | loss 3.8227 (avg 3.1393) | lr 0.002494 | seq 16
+  [aml] step 140/240 | loss 1.5111 (avg 3.0804) | lr 0.002494 | seq 16
+  [aml] step 150/240 | loss 2.0128 (avg 3.0889) | lr 0.002494 | seq 16
+  [aml] step 160/240 | loss 4.2087 (avg 3.0796) | lr 0.002494 | seq 16
+  [aml] step 170/240 | loss 1.4036 (avg 3.0309) | lr 0.002494 | seq 16
+  [aml] step 180/240 | loss 1.7419 (avg 3.0239) | lr 0.002494 | seq 16
+  [aml] step 190/240 | loss 2.0252 (avg 3.0323) | lr 0.002494 | seq 16
+  [aml] step 200/240 | loss 4.0737 (avg 3.0252) | lr 0.002493 | seq 16
+  [aml] step 210/240 | loss 3.2249 (avg 3.0479) | lr 0.002493 | seq 16
+  [aml] step 220/240 | loss 4.9696 (avg 3.0734) | lr 0.002493 | seq 16
+  [aml] step 230/240 | loss 3.7701 (avg 3.0960) | lr 0.002493 | seq 16
+[aml] training complete: 240 steps, avg loss 3.0657 (memory freed)
+  [aml] step 0/240 | loss 4.1370 (avg 4.1370) | lr 0.002493 | seq 32
+  [aml] step 10/240 | loss 1.1666 (avg 2.6092) | lr 0.002493 | seq 32
+  [aml] step 20/240 | loss 5.1154 (avg 2.9268) | lr 0.002493 | seq 32
+  [aml] step 30/240 | loss 3.9977 (avg 2.9702) | lr 0.002493 | seq 32
+  [aml] step 40/240 | loss 3.7980 (avg 2.9526) | lr 0.002493 | seq 32
+  [aml] step 50/240 | loss 0.6532 (avg 2.8257) | lr 0.002493 | seq 32
+  [aml] step 60/240 | loss 3.6682 (avg 2.8292) | lr 0.002493 | seq 32
+  [aml] step 70/240 | loss 3.7433 (avg 2.8097) | lr 0.002493 | seq 32
+  [aml] step 80/240 | loss 3.9018 (avg 2.8759) | lr 0.002492 | seq 32
+  [aml] step 90/240 | loss 0.9287 (avg 2.7959) | lr 0.002492 | seq 32
+  [aml] step 100/240 | loss 3.5464 (avg 2.7764) | lr 0.002492 | seq 32
+  [aml] step 110/240 | loss 0.4543 (avg 2.7384) | lr 0.002492 | seq 32
+  [aml] step 120/240 | loss 0.8202 (avg 2.6803) | lr 0.002492 | seq 32
+  [aml] step 130/240 | loss 1.0172 (avg 2.6133) | lr 0.002492 | seq 32
+  [aml] step 140/240 | loss 4.0797 (avg 2.5926) | lr 0.002492 | seq 32
+  [aml] step 150/240 | loss 3.4564 (avg 2.5741) | lr 0.002492 | seq 32
+  [aml] step 160/240 | loss 1.2920 (avg 2.5595) | lr 0.002492 | seq 32
+  [aml] step 170/240 | loss 3.6562 (avg 2.5921) | lr 0.002492 | seq 32
+  [aml] step 180/240 | loss 3.8153 (avg 2.5856) | lr 0.002492 | seq 32
+  [aml] step 190/240 | loss 4.2152 (avg 2.5319) | lr 0.002492 | seq 32
+  [aml] step 200/240 | loss 1.2167 (avg 2.5575) | lr 0.002491 | seq 32
+  [aml] step 210/240 | loss 3.8998 (avg 2.5398) | lr 0.002491 | seq 32
+  [aml] step 220/240 | loss 0.9475 (avg 2.5152) | lr 0.002491 | seq 32
+  [aml] step 230/240 | loss 2.1648 (avg 2.5136) | lr 0.002491 | seq 32
+[aml] training complete: 240 steps, avg loss 2.5022 (memory freed)
+
+[stage 2 — child] What it sounds like now:
+  Q: Hello.
+  A: Des are hum cars concrete.
+  Q: Who are you?
+  A: ...
+  Q: What do you know?
+  A: ...
+
+[init] Warmup complete at stage 2. Organism ready.
+[ecology] First organism in the swarm.
+molequla is alive. [evolution] Autonomous mode — background trainer running. Ctrl+C to stop.
+[dna] earth wrote 159 bytes to ecology
+[dna] earth wrote 153 bytes to ecology
+[dna] earth wrote 54 bytes to ecology
+[dna] earth wrote 50 bytes to ecology
+[dna] earth wrote 115 bytes to ecology
+[dna] earth wrote 13 bytes to ecology
+[dna] earth wrote 95 bytes to ecology
+[dna] earth wrote 104 bytes to ecology
+[dna] earth wrote 163 bytes to ecology
+[dna] earth wrote 33 bytes to ecology
+[dna] earth wrote 50 bytes to ecology
+[dna] earth wrote 10 bytes to ecology
+[dna] earth wrote 137 bytes to ecology
+[dna] earth wrote 145 bytes to ecology
+[dna] earth wrote 47 bytes to ecology
+[dna] earth wrote 50 bytes to ecology
+[dna] earth wrote 48 bytes to ecology
+[debug-onto] tick=50 corpus=173643 stage=2 freeze=0
+[dna] earth wrote 73 bytes to ecology
+[dna] earth wrote 39 bytes to ecology
+[dna] earth wrote 57 bytes to ecology
+[dna] earth wrote 81 bytes to ecology
+[dna] earth wrote 58 bytes to ecology
+[dna] earth wrote 127 bytes to ecology
+[dna] earth wrote 109 bytes to ecology
+[dna] earth wrote 150 bytes to ecology
+[dna] earth wrote 55 bytes to ecology
+[dna] earth wrote 24 bytes to ecology
+[dna] earth wrote 112 bytes to ecology
+[dna] earth wrote 31 bytes to ecology
+[dna] earth wrote 107 bytes to ecology
+[dna] earth wrote 52 bytes to ecology
+[dna] earth wrote 197 bytes to ecology
+[dna] earth wrote 77 bytes to ecology
+[dna] earth wrote 62 bytes to ecology
+[debug-onto] tick=100 corpus=173643 stage=2 freeze=0
+[dna] earth wrote 39 bytes to ecology
+[dna] earth wrote 68 bytes to ecology
+[dna] earth wrote 66 bytes to ecology
+[dna] earth wrote 46 bytes to ecology
+[dna] earth wrote 85 bytes to ecology
+[dna] earth wrote 44 bytes to ecology
+[dna] earth wrote 59 bytes to ecology
+[dna] earth wrote 56 bytes to ecology
+[dna] earth wrote 6 bytes to ecology
+[dna] earth wrote 71 bytes to ecology
+[dna] earth wrote 61 bytes to ecology
+[dna] earth wrote 183 bytes to ecology
+[dna] earth wrote 62 bytes to ecology
+[dna] earth wrote 34 bytes to ecology
+[dna] earth wrote 105 bytes to ecology
+[dna] earth wrote 12 bytes to ecology
+[debug-onto] tick=150 corpus=173643 stage=2 freeze=0
+[dna] earth wrote 55 bytes to ecology
+[dna] earth wrote 105 bytes to ecology
+[dna] earth wrote 48 bytes to ecology
+[dna] earth wrote 87 bytes to ecology
+[dna] earth wrote 29 bytes to ecology
+[dna] earth wrote 96 bytes to ecology
+[dna] earth wrote 52 bytes to ecology
+[dna] earth wrote 47 bytes to ecology
+[dna] earth wrote 134 bytes to ecology
+[dna] earth wrote 21 bytes to ecology
+[dna] earth wrote 12 bytes to ecology
+[dna] earth wrote 47 bytes to ecology
+[dna] earth wrote 93 bytes to ecology
+[dna] earth wrote 71 bytes to ecology
+[dna] earth wrote 50 bytes to ecology
+[dna] earth wrote 46 bytes to ecology
+[dna] earth wrote 38 bytes to ecology
+[debug-onto] tick=200 corpus=173643 stage=2 freeze=0
+[dna] earth wrote 33 bytes to ecology
+[dna] earth wrote 49 bytes to ecology
+[dna] earth wrote 62 bytes to ecology
+[dna] earth wrote 151 bytes to ecology
+[dna] earth wrote 41 bytes to ecology
+[dna] earth wrote 45 bytes to ecology
+[dna] earth wrote 120 bytes to ecology
+[dna] earth wrote 188 bytes to ecology
+[dna] earth wrote 112 bytes to ecology
+[dna] earth wrote 108 bytes to ecology
+[dna] earth wrote 54 bytes to ecology
+[dna] earth wrote 58 bytes to ecology
+[dna] earth wrote 30 bytes to ecology
+[dna] earth wrote 67 bytes to ecology
+[dna] earth wrote 56 bytes to ecology
+[dna] earth wrote 104 bytes to ecology
+[dna] earth wrote 60 bytes to ecology
+[debug-onto] tick=250 corpus=173643 stage=2 freeze=0
+[dna] earth wrote 6 bytes to ecology
+[dna] earth wrote 61 bytes to ecology
+[dna] earth wrote 119 bytes to ecology
+[dna] earth wrote 29 bytes to ecology
+[dna] earth wrote 37 bytes to ecology
+[dna] earth wrote 71 bytes to ecology
+[dna] earth wrote 73 bytes to ecology
+[dna] earth wrote 112 bytes to ecology
+[dna] earth wrote 43 bytes to ecology
+[dna] earth wrote 50 bytes to ecology
+[dna] earth wrote 174 bytes to ecology
+[dna] earth wrote 33 bytes to ecology
+[dna] earth wrote 46 bytes to ecology
+[dna] earth wrote 29 bytes to ecology
+[dna] earth wrote 90 bytes to ecology
+[dna] earth wrote 40 bytes to ecology
+[debug-onto] tick=300 corpus=173643 stage=2 freeze=0
+[dna] earth wrote 89 bytes to ecology
+[dna] earth wrote 8 bytes to ecology
+[dna] earth wrote 80 bytes to ecology
+[dna] earth wrote 94 bytes to ecology
+[dna] earth wrote 210 bytes to ecology
+[dna] earth wrote 34 bytes to ecology
+[dna] earth wrote 121 bytes to ecology
+[dna] earth wrote 37 bytes to ecology
+[dna] earth wrote 93 bytes to ecology
+[dna] earth wrote 59 bytes to ecology
+[dna] earth wrote 33 bytes to ecology
+[dna] earth wrote 137 bytes to ecology
+[dna] earth wrote 79 bytes to ecology
+[dna] earth wrote 29 bytes to ecology
+[dna] earth wrote 230 bytes to ecology
+[dna] earth wrote 117 bytes to ecology
+[dna] earth wrote 85 bytes to ecology
+[debug-onto] tick=350 corpus=173643 stage=2 freeze=0
+[dna] earth wrote 40 bytes to ecology
+[dna] earth wrote 57 bytes to ecology
+[dna] earth wrote 95 bytes to ecology
+[dna] earth wrote 16 bytes to ecology
+[dna] earth wrote 82 bytes to ecology
+[dna] earth wrote 324 bytes to ecology
+[dna] earth wrote 42 bytes to ecology
+[dna] earth wrote 12 bytes to ecology
+[dna] earth wrote 23 bytes to ecology
+[dna] earth wrote 51 bytes to ecology
+[dna] earth wrote 155 bytes to ecology
+[dna] earth wrote 63 bytes to ecology
+[dna] earth wrote 142 bytes to ecology
+[dna] earth wrote 68 bytes to ecology
+[dna] earth wrote 126 bytes to ecology
+[dna] earth wrote 110 bytes to ecology
+[dna] earth wrote 260 bytes to ecology
+[debug-onto] tick=400 corpus=173643 stage=2 freeze=0
+[dna] earth wrote 35 bytes to ecology
+[dna] earth wrote 50 bytes to ecology
+[dna] earth wrote 78 bytes to ecology
+[dna] earth wrote 62 bytes to ecology
+[dna] earth wrote 128 bytes to ecology
+[dna] earth wrote 40 bytes to ecology
+[dna] earth wrote 56 bytes to ecology
+[dna] earth wrote 165 bytes to ecology
+[dna] earth wrote 103 bytes to ecology
+[dna] earth wrote 100 bytes to ecology
+[dna] earth wrote 43 bytes to ecology
+[dna] earth wrote 46 bytes to ecology
+[dna] earth wrote 27 bytes to ecology
+[dna] earth wrote 65 bytes to ecology
+[dna] earth wrote 6 bytes to ecology
+[dna] earth wrote 31 bytes to ecology
+[debug-onto] tick=450 corpus=173643 stage=2 freeze=0
+[dna] earth wrote 35 bytes to ecology
+[dna] earth wrote 155 bytes to ecology
+[dna] earth wrote 358 bytes to ecology
+[dna] earth wrote 40 bytes to ecology
+[dna] earth wrote 38 bytes to ecology
+[dna] earth wrote 51 bytes to ecology
+[dna] earth wrote 86 bytes to ecology
+[dna] earth wrote 103 bytes to ecology
+[dna] earth wrote 183 bytes to ecology
+[dna] earth wrote 6 bytes to ecology
+[dna] earth wrote 49 bytes to ecology
+[dna] earth wrote 38 bytes to ecology
+[dna] earth wrote 29 bytes to ecology
+[dna] earth wrote 128 bytes to ecology
+[dna] earth wrote 35 bytes to ecology
+[dna] earth wrote 44 bytes to ecology
+[dna] earth wrote 30 bytes to ecology
+[debug-onto] tick=500 corpus=173643 stage=2 freeze=0
+[dna] earth wrote 84 bytes to ecology
+[dna] earth wrote 144 bytes to ecology
+[dna] earth wrote 27 bytes to ecology
+[dna] earth wrote 138 bytes to ecology
+[dna] earth wrote 59 bytes to ecology
+[dna] earth wrote 17 bytes to ecology
+[dna] earth wrote 6 bytes to ecology
+[dna] earth wrote 13 bytes to ecology
+[dna] earth wrote 111 bytes to ecology
+[dna] earth wrote 55 bytes to ecology
+[dna] earth wrote 57 bytes to ecology
+[dna] earth wrote 116 bytes to ecology
+[dna] earth wrote 241 bytes to ecology
+[dna] earth wrote 112 bytes to ecology
+[dna] earth wrote 30 bytes to ecology
+[dna] earth wrote 133 bytes to ecology
+[dna] earth wrote 99 bytes to ecology
+[debug-onto] tick=550 corpus=173643 stage=2 freeze=0
+[dna] earth wrote 55 bytes to ecology
+[dna] earth wrote 119 bytes to ecology
+[dna] earth wrote 48 bytes to ecology
+[dna] earth wrote 71 bytes to ecology
+[dna] earth wrote 43 bytes to ecology
+[dna] earth wrote 170 bytes to ecology
+[dna] earth wrote 35 bytes to ecology
+[dna] earth wrote 30 bytes to ecology
+[dna] earth wrote 64 bytes to ecology
+[dna] earth wrote 131 bytes to ecology
+[dna] earth wrote 30 bytes to ecology
+[dna] earth wrote 51 bytes to ecology
+[dna] earth wrote 149 bytes to ecology
+[dna] earth wrote 81 bytes to ecology
+[dna] earth wrote 76 bytes to ecology
+[dna] earth wrote 123 bytes to ecology
+[debug-onto] tick=600 corpus=173643 stage=2 freeze=0
+[dna] earth wrote 311 bytes to ecology
+[dna] earth wrote 17 bytes to ecology
+[dna] earth wrote 89 bytes to ecology
+[dna] earth wrote 124 bytes to ecology
+[dna] earth wrote 34 bytes to ecology
+[dna] earth wrote 53 bytes to ecology
+[dna] earth wrote 29 bytes to ecology
+[dna] earth wrote 108 bytes to ecology
+[dna] earth wrote 45 bytes to ecology
+[dna] earth wrote 43 bytes to ecology
+[dna] earth wrote 7 bytes to ecology
+[dna] earth wrote 43 bytes to ecology
+[dna] earth wrote 104 bytes to ecology
+[dna] earth wrote 42 bytes to ecology
+[dna] earth wrote 64 bytes to ecology
+[dna] earth wrote 104 bytes to ecology
+[dna] earth wrote 113 bytes to ecology
+[debug-onto] tick=650 corpus=173643 stage=2 freeze=0
+[dna] earth wrote 57 bytes to ecology
+[dna] earth wrote 10 bytes to ecology
+[dna] earth wrote 77 bytes to ecology
+[dna] earth wrote 48 bytes to ecology
+[dna] earth wrote 91 bytes to ecology
+[dna] earth wrote 46 bytes to ecology
+[dna] earth wrote 117 bytes to ecology
+[dna] earth wrote 30 bytes to ecology
+[dna] earth wrote 153 bytes to ecology
+
+[evolution] Organism shutting down gracefully.
