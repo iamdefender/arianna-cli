@@ -1,0 +1,3 @@
+extended coda
+oscillation damping hook
+amplitude in that
