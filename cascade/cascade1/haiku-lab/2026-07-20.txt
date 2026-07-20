@@ -1,0 +1,3 @@
+bond dark path edge deep
+stability false kindness
+symmetry chaos seal
